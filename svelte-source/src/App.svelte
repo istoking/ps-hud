@@ -7,9 +7,7 @@
   import DebugStore from './stores/debugStore';
   import PlayerHudStore from './stores/playerStatusHudStore';
   import MapBorder from "./components/map-border-hud.svelte";
-  import CompassHud from './components/compass-hud.svelte';
   import MoneyHud from './components/money-hud.svelte';
-  import VehicleHud from './components/vehicle-hud.svelte';
 
   EventHandler();
 
@@ -50,10 +48,8 @@
 
 <main class="{DebugStore ? 'bg-dark-300' :'bg-transparent'} min-h-screen">
   {#if !$MenuStore.isCineamticModeChecked }
-    <CompassHud />
     <MoneyHud />
     <MetaLayout />
-    <VehicleHud />
     <MapBorder />
   {/if}
   <Menu />
